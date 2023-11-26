@@ -43,14 +43,13 @@ function controleArCondicionado(temperatura) {
 
   // Definição das regras
   const regras = [
-      Math.min(pertFrio, 1),        // Se está frio, aumenta a temperatura
-      pertConfortavel,              // Se está confortável, mantém a temperatura
-      Math.min(pertQuente, 1)       // Se está quente, diminui a temperatura
+      Math.min(pertFrio, 1),
+      pertConfortavel,
+      Math.min(pertQuente, 1)
   ];
 
-  // Definição das ações baseadas nas regras
-  const aumentoBase = 5; // Aumento base de temperatura em 5 graus
-  const diminuicaoBase = 5; // Diminuição base de temperatura em 5 graus
+  const aumentoBase = 5; 
+  const diminuicaoBase = 5; 
 
   const acao = regras.reduce((acc, cur, idx) => {
       if (cur > acc.valor) {
